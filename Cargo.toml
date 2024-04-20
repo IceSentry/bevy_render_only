@@ -1,0 +1,18 @@
+[package]
+name = "bevy_render_only"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wgpu = "0.19.1"
+winit = "0.29.10"
+bevy = { version = "0.13.2", default-features = false, features = [
+    "bevy_asset",
+    "bevy_winit",
+    "bevy_render",
+] }
+anyhow = "1.0.79"
+# bevy already uses futures-lite internally so use the same version here
+futures-lite = "2.2.0"
